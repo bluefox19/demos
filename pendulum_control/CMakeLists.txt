@@ -112,7 +112,7 @@ if(BUILD_TESTING)
     file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/test_pendulum__${rmw_implementation}")
     ament_add_pytest_test(test_pendulum__${rmw_implementation}
       "${CMAKE_CURRENT_BINARY_DIR}/test_pendulum__${rmw_implementation}.py"
-      TIMEOUT 20
+      TIMEOUT 60
       ENV
       RCL_ASSERT_RMW_ID_MATCHES=${rmw_implementation}
       RMW_IMPLEMENTATION=${rmw_implementation}
@@ -127,7 +127,7 @@ if(BUILD_TESTING)
 
     ament_add_pytest_test(test_pendulum_teleop__${rmw_implementation}
       "${CMAKE_CURRENT_BINARY_DIR}/test_pendulum_teleop__${rmw_implementation}.py"
-      TIMEOUT 20
+      TIMEOUT 60
       ENV
       RCL_ASSERT_RMW_ID_MATCHES=${rmw_implementation}
       RMW_IMPLEMENTATION=${rmw_implementation}
